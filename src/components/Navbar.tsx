@@ -1,7 +1,7 @@
 
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { UserCircle, Package, Bike, Bell, Menu, X } from 'lucide-react';
+import { Package, Menu, X } from 'lucide-react';
 import { useState } from 'react';
 
 const Navbar = () => {
@@ -34,12 +34,16 @@ const Navbar = () => {
               About
             </Link>
             <div className="ml-4 flex items-center space-x-2">
-              <Button className="bg-orange-500 hover:bg-orange-600">
-                Login
-              </Button>
-              <Button variant="outline" className="border-blue-500 text-blue-500 hover:bg-blue-50">
-                Sign Up
-              </Button>
+              <Link to="/login">
+                <Button className="bg-orange-500 hover:bg-orange-600">
+                  Login
+                </Button>
+              </Link>
+              <Link to="/signup">
+                <Button variant="outline" className="border-blue-500 text-blue-500 hover:bg-blue-50">
+                  Sign Up
+                </Button>
+              </Link>
             </div>
           </div>
 
@@ -86,14 +90,18 @@ const Navbar = () => {
             </Link>
             <div className="pt-4 pb-3 border-t border-gray-200">
               <div className="flex items-center px-3 space-x-2">
-                <Button className="w-full bg-orange-500 hover:bg-orange-600">
-                  Login
-                </Button>
+                <Link to="/login" className="w-full" onClick={toggleMenu}>
+                  <Button className="w-full bg-orange-500 hover:bg-orange-600">
+                    Login
+                  </Button>
+                </Link>
               </div>
               <div className="mt-3 px-3">
-                <Button variant="outline" className="w-full border-blue-500 text-blue-500 hover:bg-blue-50">
-                  Sign Up
-                </Button>
+                <Link to="/signup" className="w-full" onClick={toggleMenu}>
+                  <Button variant="outline" className="w-full border-blue-500 text-blue-500 hover:bg-blue-50">
+                    Sign Up
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>
