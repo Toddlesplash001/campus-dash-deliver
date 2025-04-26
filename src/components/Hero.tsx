@@ -1,6 +1,6 @@
-
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
   return (
@@ -29,13 +29,17 @@ const Hero = () => {
               </p>
               <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                 <div className="rounded-md shadow">
-                  <Button className="w-full flex items-center justify-center px-8 py-3 bg-blue-500 hover:bg-blue-600 text-white text-base font-medium">
-                    Order Now <ArrowRight className="ml-2 h-4 w-4" />
+                  <Button asChild className="w-full flex items-center justify-center px-8 py-3 bg-blue-500 hover:bg-blue-600 text-white text-base font-medium">
+                    <Link to="/order-now">
+                      Order Now <ArrowRight className="ml-2 h-4 w-4" />
+                    </Link>
                   </Button>
                 </div>
                 <div className="mt-3 sm:mt-0 sm:ml-3">
-                  <Button variant="outline" className="w-full flex items-center justify-center px-8 py-3 border border-orange-500 text-orange-500 hover:bg-orange-50 text-base font-medium">
-                    Become a Courier
+                  <Button asChild variant="outline" className="w-full flex items-center justify-center px-8 py-3 border border-orange-500 text-orange-500 hover:bg-orange-50 text-base font-medium">
+                    <Link to="/become-courier">
+                      Become a Courier
+                    </Link>
                   </Button>
                 </div>
               </div>

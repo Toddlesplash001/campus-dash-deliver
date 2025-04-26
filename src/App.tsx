@@ -10,6 +10,8 @@ import Signup from "./pages/Signup";
 import Profile from "./pages/Profile";
 import Orders from "./pages/Orders";
 import Tracking from "./pages/Tracking";
+import OrderNow from "./pages/OrderNow";
+import BecomeCourier from "./pages/BecomeCourier";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -27,6 +29,8 @@ const App = () => (
           <Route path="/profile" element={<Profile />} />
           <Route path="/orders" element={<Orders />} />
           <Route path="/tracking" element={<Tracking />} />
+          <Route path="/order-now" element={<OrderNow />} />
+          <Route path="/become-courier" element={<BecomeCourier />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
