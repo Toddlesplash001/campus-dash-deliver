@@ -1,7 +1,7 @@
 
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { Package, Menu, X } from 'lucide-react';
+import { Package, Menu, X, User, Navigation } from 'lucide-react';
 import { useState } from 'react';
 
 const Navbar = () => {
@@ -24,14 +24,17 @@ const Navbar = () => {
 
           {/* Desktop menu */}
           <div className="hidden md:flex items-center space-x-4">
-            <Link to="/services" className="text-gray-700 hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium">
-              Services
+            <Link to="/orders" className="text-gray-700 hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium flex items-center">
+              <Package className="w-4 h-4 mr-2" />
+              Orders
             </Link>
-            <Link to="/become-courier" className="text-gray-700 hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium">
-              Become a Courier
+            <Link to="/tracking" className="text-gray-700 hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium flex items-center">
+              <Navigation className="w-4 h-4 mr-2" />
+              Track
             </Link>
-            <Link to="/about" className="text-gray-700 hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium">
-              About
+            <Link to="/profile" className="text-gray-700 hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium flex items-center">
+              <User className="w-4 h-4 mr-2" />
+              Profile
             </Link>
             <div className="ml-4 flex items-center space-x-2">
               <Link to="/login">
@@ -68,25 +71,28 @@ const Navbar = () => {
         <div className="md:hidden bg-white shadow-lg">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             <Link
-              to="/services"
-              className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-500 hover:bg-blue-50"
+              to="/orders"
+              className="flex items-center px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-500 hover:bg-blue-50"
               onClick={toggleMenu}
             >
-              Services
+              <Package className="w-4 h-4 mr-2" />
+              Orders
             </Link>
             <Link
-              to="/become-courier"
-              className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-500 hover:bg-blue-50"
+              to="/tracking"
+              className="flex items-center px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-500 hover:bg-blue-50"
               onClick={toggleMenu}
             >
-              Become a Courier
+              <Navigation className="w-4 h-4 mr-2" />
+              Track
             </Link>
             <Link
-              to="/about"
-              className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-500 hover:bg-blue-50"
+              to="/profile"
+              className="flex items-center px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-500 hover:bg-blue-50"
               onClick={toggleMenu}
             >
-              About
+              <User className="w-4 h-4 mr-2" />
+              Profile
             </Link>
             <div className="pt-4 pb-3 border-t border-gray-200">
               <div className="flex items-center px-3 space-x-2">
